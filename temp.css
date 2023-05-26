@@ -1,4 +1,4 @@
-.t1{
+/* .t1{
     font-size:15px ;
     color: rgba(55, 56, 55, 0.823);
     padding-left: 15px;
@@ -21,8 +21,8 @@
     color: rgb(255, 255, 255);
     padding-left:100px;
     margin-top: 20px;
-}
-.weather{
+} */
+/* .weather{
     color: white;
     margin-top:20px;
     padding-bottom: 20px;
@@ -39,5 +39,26 @@
 }
 .hq{
     margin-top: -200px;
+} */
+
+@media(max-width:410px){
+.weather{
+   font-size:10px ;
+   margin-left:-50px;
+
+}
+.head{
+    font-size: 30px;
+}
+.sub{
+    font-size: 10px;
+}
+.th{
+    font-size: 20px;
+}
+.tm{
+    width:60px
 }
 
+
+}

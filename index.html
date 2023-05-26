@@ -17,20 +17,16 @@
 
 <body>
     <!-- index -->
-    <div  class=" in container ms-5 mt-5 w-25 bg-light">
-        <h1 class="text-center mt-3 p-2 ">WEATHER</h1>
-        <input id="city" type="text" class="form-control mt-3 p-2 container w-75 " placeholder="enter city name">
-        <div class="container w-25">
-            <button onclick="wws()" type="button" class="  btn btn-outline-success  mt-3 p-2 ">submit</button>
+    <div class="container w-75 bg-light mt-3 text-center">
+        <h1>Weather</h1>
+        <input id="city" class="form-control mt-2 container w-50" type="text" placeholder="enter city name">
+        <button onclick="wws()" class="btn btn-outline-info mt-2 " type="button" >submit</button>
 
-        </div>
     </div>
-    <!-- weather -->
-    <div id="result" class="container w-100 mt-3 p-2"></div>
-
+    <div class="text-center p-2 mt-5" id="result"></div>
 </body>
 <script>
-    
+
 
     var currentdate = new Date();
     var datetime = + currentdate.getDate() + "/"
@@ -47,7 +43,7 @@
         area = city.value
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${area}&appid=b41ec3be35c7dac8aabbc21ba253137a`)
             .then(dat => dat.json()).then(out => displayData(out))
-            
+
 
         function displayData(cityData) {
             temp = parseInt(cityData.main.temp)
@@ -64,53 +60,55 @@
 
             // cold
             if (tem < 25) {
-                result.innerHTML = ` <div class=" hq container w">
+                result.innerHTML = ` <div class=" hq container w mt-5  col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     
-    <div class="container w-25  " style="background-image: url(./weim/74c5fc81c366ca0ceaab49e00d702ea8.jpg); height:600px; border-radius: 10px; border:1px black solid; ">
+    <div class="container w-75 col-lg-12 col-md-6 col-sm-4 col-xs-4 " style="background-image: url(./weim/74c5fc81c366ca0ceaab49e00d702ea8.jpg); background-repete:no-repete height:600px; border-radius: 10px; border:1px black solid; ">
        
-        <div class="container w  p-2"  style="height: 100px; width: 200px;  margin-top: 50px; ">
-       <h1 class="container w text-center text-white"style="font-size:100px;">${tem}°</h1>
+        <div class="container w-50 p-2 col-lg-12 col-md-6 col-sm-4 col-xs-4"  style="height: 100px; width: 200px;  margin-top: 50px; ">
+       <h1 class="tm container w- col-lg-12 col-md-6 col-sm-4 col-xs-4 text-center text-white"style="font-size:100px;">${tem}°</h1>
        <h4  class="text-center text-white">${nme}</h4>
     </div>
-       <div >
-        <img style="margin-left:105px" class=" img1 container w-25  " src="./weim/snowflake.png" alt="">
-        </div>
-       <div class="dt text-white ms-3"><h5 >${datetime}</h5>
+       
+        <div class=" container w-50 mt-5"><img style="margin-left:94px" class=" img1  w-25 mt-5   " src="./weim/snowflake.png" alt=""></div>
+     
+       <div class="dt text-white ms-3 col-lg-12 col-md-6 col-sm-4 col-xs-4 mt-5"><h5 >${datetime}</h5>
          <h5 >${times}</h5>
         </div>
   
     <!-- weather -->
-                        <div class=" weather container w  ">
-                            <h5>Weather details</h5>
-                            <table>
-                               <tr>
-                                 <td class="t1">Feels like</td>
-                                 <td class="t2">Humidity</td>
-                                </tr>
-                                <tr>
-                                  <td class="e1">${fl}</td>
-                                  <td class="e2">${hum}</td>
-                                </tr> 
-                                <tr>
-                                    <td class="t1">Wind</td>
-                                    <td class="t2">Sea_level</td>
-                                </tr>
-                                <tr>
-                                   <td class="e1">${wind}</td>
-                                   <td class="e2">${sl}</td>
-                                </tr>
-                                <tr>
-                                  <td class="t1">Visibility</td> 
-                                  <td class="t2">Air pressure</td>
-
-                                </tr>
-                                <tr>
-                                    <td class="e1">${visb}</td>
-                                    <td class="e2">${ap}</td>
-                                </tr>
+                        
+                            <div class=" weather container w   col-lg-12 col-md-6 col-sm-4 col-xs-4 mt-3 ">
+                                <h5 class="th">Weather details</h5>
+                                <table class="container w ">
+                                   <tr>
+                                     <td class="t1">Feels like</td>
+                                     <td class="t2 ">Humidity</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="e1">${fl}</td>
+                                      <td class="e2">${hum}</td>
+                                    </tr> 
+                                    <tr>
+                                        <td class="t1">Wind</td>
+                                        <td class="t2">Sea_level</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="e1">${wind}</td>
+                                       <td class="e2">${sl}</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="t1">Visibility</td> 
+                                      <td class="t2">Air pressure</td>
     
-                            </table>
-                        </div>
+                                    </tr>
+                                    <tr>
+                                        <td class="e1">${visb}</td>
+                                        <td class="e2">${ap}</td>
+                                    </tr>
+        
+                                </table>
+                            </div>
+                        
                 
         </div>
 </div>
@@ -129,7 +127,7 @@
     </div>
        <div >
         <img style="margin-left:105px" class=" img1 container w-25  " src="./weim/sun (2).png" alt="">
-        </div>
+       
        <div class="dt text-white ms-3"><h5 >${datetime}</h5>
          <h5 >${times}</h5>
         </div>
@@ -169,7 +167,7 @@
                 
         </div>
 </div>`
- }
+            }
             // hot
             else if (tem > 30) {
                 result.innerHTML = `<div  class=" hq container w">
@@ -228,4 +226,6 @@
 
 
 </script>
+
 </html>
+
