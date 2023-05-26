@@ -1,0 +1,43 @@
+.t1{
+    font-size:15px ;
+    color: rgba(55, 56, 55, 0.823);
+    padding-left: 15px;
+    margin-top: 40px;
+}
+.t2{
+    font-size:15px ;
+    color: rgba(55, 56, 55, 0.823);
+    padding-left: 100px;
+    margin-top: 200px;
+}
+.e1{
+    font-size:18px ;
+    color: rgb(255, 255, 255);
+    padding-left:15px;
+    margin-top: 20px;
+}
+.e2{
+    font-size:18px ;
+    color: rgb(255, 255, 255);
+    padding-left:100px;
+    margin-top: 20px;
+}
+.weather{
+    color: white;
+    margin-top:20px;
+    padding-bottom: 20px;
+}
+.dt{
+   margin-left:30 px;
+   margin-top: 25px;
+}
+.img1{
+    margin-top: 100px;
+}
+.in{
+    margin-left: 200px;
+}
+.hq{
+    margin-top: -200px;
+}
+
