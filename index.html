@@ -19,7 +19,7 @@
     <!-- index -->
     <div style="background-image: url(./weim/foggy_mountains_3.jpg); height:980px;">
         <h2 class="container w text-center">Weather</h2>
-        <div  class="container w-25" style="height: 70px; border-radius: 10px; color: black; border: 1px solid ; display: flex; justify-content:space-around">
+        <div  class="container w-50" style="height: 70px; border-radius: 10px; color: black; border: 1px solid ; display: flex; justify-content:space-around">
         <input id="city" type="text" class=" form-control mt-3 mb-3  w-75 " placeholder="Enter City Name">
         <i  onclick="wws()" class="fa-solid fa-magnifying-glass fa-2x mt-3 text-info" style="cursor: pointer;"></i>
         </div>
@@ -63,7 +63,7 @@
 
             // cold
             if (tem < 25) {
-                result.innerHTML = ` <div  class=" container w  col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
+                result.innerHTML = ` <div  class=" container w-50  col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
                     
     <div  class="container w-75  col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 " style="height:712px;background-color: rgba(88, 87, 87, 0.574); background-repeat: no-repeat; border-radius: 10px; border:1px black solid;  ">
        
